@@ -1,5 +1,5 @@
 //
-//  ViewController3.swift
+//  XibViewController.swift
 //  swiftui_storyboard_mixed_use
 //
 //  Created by source on 2022/11/22.
@@ -17,6 +17,7 @@ class XibViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //將SwiftUI View加入controller view中
         let childView = UIHostingController(rootView: SwiftUISubView())
         addChild(childView)
         childView.view.frame = CGRect(x: 0,

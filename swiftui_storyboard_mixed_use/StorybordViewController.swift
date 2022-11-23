@@ -18,6 +18,7 @@ class StoryboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //將SwiftUI View加入controller view中
         let childView = UIHostingController(rootView: SwiftUISubView())
         addChild(childView)
   
@@ -26,8 +27,7 @@ class StoryboardViewController: UIViewController {
                                       width: UIScreen.main.bounds.width,
                                       height: UIScreen.main.bounds.height*0.3)
         self.view .addSubview(childView.view)
-        //childView.didMove(toParent: self)
-    
+        childView.didMove(toParent: self)
     }
 
     @IBAction func clickClose(_ sender: Any) {
